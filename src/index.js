@@ -3,6 +3,10 @@
 // 2. get and displays contract pixels
 // 3. listen for pixel changed contract event (in case update cancas)
 
+
+Web3 = require('web3')
+
+
 // --------------- CHANGE BEFORE RUNNING ----------------
 
 let blockchain_port = "8584";
@@ -26,6 +30,10 @@ web3.eth.getAccounts().then((f) => {
 	account = f[accountNumber];
 })
 
+function updateContractAdress(contract_address){
+	console.log("updating contract");
+	document.getElementById("contract").innerHTML = contract_address;
+}
 
 function updateCanvas(){
 	// get contract canvas and display
@@ -39,10 +47,10 @@ EventContract.PixelChanged(function(err, data) {
 		// do stuff with data
 	}
 	alert("Error while connecting with the contract " + contract_address + ".");
-}
+});
 
-
-$(document).ready(function() {
+$( document ).ready(function() {
+	//updateContractAdress(contract_address);
 	console.log("document ready");
-
+	
 });
