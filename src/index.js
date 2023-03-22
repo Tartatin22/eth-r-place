@@ -42,3 +42,7 @@ EventContract.PixelChanged(function(err, data) {
 }
 
 
+$(document).ready(function() {
+	console.log("document ready");
+
+});
