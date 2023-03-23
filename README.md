@@ -7,7 +7,7 @@ npx hardhat node
 ### Déployer le contrat
 npx hardhat run scripts/deploy.js --network localhost
 ### Déployer le front-end
-
+npm start
 
 ## libraries
 ### ethers
