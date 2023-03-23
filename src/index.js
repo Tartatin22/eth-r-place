@@ -4,7 +4,7 @@
 // 3. listen for pixel changed contract event (in case update cancas)
 
 
-Web3 = require('web3')
+Web3 = require('web3-eth')
 
 
 // --------------- CHANGE BEFORE RUNNING ----------------
@@ -19,7 +19,7 @@ let contract_abi = null; // path to the contract abi file
 
 // -------------- SCRIPT ---------------
 
-let contract = web3.eth.contract(contract_abi);
+let contract = Web3.eth.contract(contract_abi);
 
 let EventContract = ClientReceipt.at(contract_address);
 
