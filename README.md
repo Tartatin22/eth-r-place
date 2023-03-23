@@ -1,5 +1,7 @@
 # eth-r-place
 ## Get started
+### Resolve dependencies
+npm install
 ### Compiler le contrat
 npx hardhat compile
 ### Déployer la blockchain
@@ -14,5 +16,5 @@ npm start
 to make interactions between contract and front-end
 
 # Command history
-npx create-reat-app eth-r-place
+npx create-react-app eth-r-place
 
