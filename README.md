@@ -2,8 +2,12 @@
 ## Get started
 ### Compiler le contrat
 npx hardhat compile
+### Déployer la blockchain
+npx hardhat node
 ### Déployer le contrat
-npx harhat node
+npx hardhat run scripts/deploy.js --network localhost
+### Déployer le front-end
+
 
 ## libraries
 ### ethers
