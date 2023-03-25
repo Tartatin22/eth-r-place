@@ -1,3 +1,6 @@
-/node_modules
-/artifacts
-/cache
+node_modules
+.idea
+
+#Hardhat files
+cache
+artifacts

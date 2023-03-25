@@ -10,9 +10,6 @@ contract PixelMap {
     event PixelChanged(uint x, uint y, uint color);
 
     constructor () {
-        for (uint i = 0; i < 256; i++) {
-            pixels[i] = 0;
-        }
     }
 
     function getPixel(uint x, uint y) public view returns (uint) {

@@ -1,10 +1,7 @@
-# eth-r-place
-## Get started
-### Resolve dependencies
+# Getting started
 `npm install`
-### Compile contract
-`npx hardhat compile`
-### Create blockchain
 `npx hardhat node`
-### Deploy contract
-`npx hardhat run scripts/deploy.js --network localhost`
+`npx hardhat --network localhost run scripts/deploy.js`
+`cd frontend`
+`npm install`
+`npm run start`
