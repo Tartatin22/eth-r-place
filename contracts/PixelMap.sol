@@ -4,7 +4,7 @@ pragma solidity ^0.8.9;
 // Uncomment this line to use console.log
 // import "hardhat/console.sol";
 
-contract Controller {
+contract PixelMap {
     uint8[256] public pixels;
 
     event PixelChanged(uint x, uint y, uint color);

@@ -8,13 +8,13 @@ const hre = require("hardhat");
 
 async function main() {
 
-  const Controller = await hre.ethers.getContractFactory("Controller");
-  const controller = await Controller.deploy();
+  const PixelMap = await hre.ethers.getContractFactory("PixelMap");
+  const pixelMap = await PixelMap.deploy();
 
-  await controller.deployed();
+  await pixelMap.deployed();
 
   console.log(
-    `Controller deployed to ${controller.address}`
+    `PixelMap deployed to ${pixelMap.address}`
   );
 }
 
