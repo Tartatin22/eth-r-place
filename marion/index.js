@@ -19,18 +19,19 @@ const colors = {
 
 let canvas = document.getElementById("canvas");
 const size = canvas.width / 16 ;
+let chosenPixel = 0;
 
 function draw(tab) {
     if (canvas.getContext) {
         let ctx = canvas.getContext('2d');
     for (const x of Array(256).keys()) {
         couleur = int_to_color(tab[x]);
-        py = (Math.floor(x/size) * size);
-        px = ((x % size) * size);
+        py = Math.floor(x/16) * size;
+        px = (x % 16) * size;
         ctx.fillStyle = couleur;
         ctx.fillRect(px, py, px + size,py + size);
-        console.log("coordonees de "+" " + x + " " + px + "et" + " " + py)
-          }
+        //console.log("coordonees de " + x + " : " + px + " et " + py)
+    }
   }  
   
 }
@@ -43,10 +44,10 @@ draw([15, 15, 0, 3, 6, 5, 5, 4, 1, 1, 2, 5, 4, 14, 10, 14, 7, 4, 5, 8, 0, 2, 6, 
 
     
 canvas.addEventListener("click", function (evt) {
-let mousePos = getMousePos(canvas, evt);
-let chosenpixel = givecoord(mousePos.x,mousePos.y);
-//alert(mousePos.x + ',' + mousePos.y);
-alert(chosenpixel);
+    let mousePos = getMousePos(canvas, evt);
+    chosenpixel = givecoord(mousePos.x,mousePos.y);
+    //alert(mousePos.x + ',' + mousePos.y);
+    //alert(chosenpixel);
 }, false);
 
 
@@ -59,8 +60,8 @@ function getMousePos(canvas, evt) {
 }
 
 function givecoord(x,y){
-col = Math.floor(x/size);
-line = Math.floor(y/size);
-pixels_number = ((line*size)/2) + col;
-return pixels_number;
+    col = Math.floor(x/size);
+    line = Math.floor(y/size);
+    pixels_number = line*16 + col;
+    return pixels_number;
 }
