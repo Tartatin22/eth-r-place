@@ -170,7 +170,7 @@ export class Dapp extends React.Component {
                   this._setPixel(x, y, color)
                 }
                 getPixels={() =>
-                  this._pixels()
+                  this._getPixels()
                 }
               />
             )}
@@ -373,15 +373,15 @@ export class Dapp extends React.Component {
   }
 
   // This method change a pixel in the pixel map
-  async _pixels() {
-
+  async _getPixels() {
     try {
       // If a transaction fails, we save that error in the component's state.
       // We only save one such error, so before sending a second transaction, we
       // clear it.
       this._dismissTransactionError();
 
-      return await this._pixelMap.getAllPixels();
+      const pixels = await this._pixelMap.getAllPixels();
+      return pixels
     } catch (error) {
       // Other errors are logged and stored in the Dapp's state. This is used to
       // show them to the user, and for debugging.
