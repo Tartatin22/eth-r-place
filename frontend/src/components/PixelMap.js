@@ -3,62 +3,28 @@ import React from "react";
 export function PixelMap({ setPixel, getPixels }) {
   return (
     <div>
-      <h4>PixelMap</h4>
-      <form
-        onSubmit={(event) => {
-          // This function just calls the transferTokens callback with the
-          // form's data.
+        <script src="./index.js"></script>
+	<div class="parent">
+		<div class="canvasFrame">
+			<h1>canvas</h1>
+		
+		</div>
+
+		<div class="colorPaletteFrame">
+			    <canvas id="colorpalette" width="100" height="400"></canvas>
+		</div>
+	</div>		
+
+
+
           event.preventDefault();
 
-          const formData = new FormData(event.target);
-          const x = formData.get("x");
-          const y = formData.get("y");
-          const color = formData.get("color");
 
-          if (x && y && color) {
-            setPixel(x, y, color);
-          }
+          //setPixel(x, y, color);
           const pixels = getPixels();
           console.log(pixels);
-        }}
-      >
-        <div className="form-group">
-          <label>x</label>
-          <input
-            className="form-control"
-            type="number"
-            step="1"
-            name="x"
-            placeholder="0"
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label>y</label>
-          <input
-            className="form-control"
-            type="number"
-            step="1"
-            name="y"
-            placeholder="0"
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label>color</label>
-          <input
-            className="form-control"
-            type="number"
-            step="1"
-            name="color"
-            placeholder="0"
-            required
-          />
-        </div>
-        <div className="form-group">
-          <input className="btn btn-primary" type="submit" value="SetPixel" />
-        </div>
-      </form>
+ 
+
     </div>
   );
 }
