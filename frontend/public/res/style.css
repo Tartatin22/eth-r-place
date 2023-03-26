@@ -1,0 +1,49 @@
+.imgContainer {
+    margin-top: 17px;
+    width: 48px;
+    height: 48px;
+}
+
+/* Resize image */
+.imgContainer img {
+    width: 100%;
+    height: auto;
+}
+
+.imgContainerBlock {
+       margin-top: 17px;
+       width: 16px;
+       height: 16px;
+}
+
+.imgContainerBlock img {
+       width: 100%;
+       height: auto;
+}
+
+.title {
+	display: flex;
+}
+
+/* CSS GRID for main page */
+.parent {
+	display: grid;
+	grid-template-columns: repeat(14, 1fr);
+	grid-template-rows: repeat(14, 1fr);
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+	border: 2px dotted;
+}
+
+.canvasFrame { 
+	grid-area: 2 / 2 / 10 / 10;
+	border: solid;
+}
+.colorPaletteFrame { 
+	grid-area: 2 / 11 / 10 / 14;
+	border: solid;
+}
+
+.blockInfo {
+	display: flex;
+}
