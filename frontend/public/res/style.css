@@ -35,16 +35,16 @@
 	grid-template-rows: repeat(14, 1fr);
 	grid-column-gap: 0px;
 	grid-row-gap: 0px;
-	border: 2px dotted;
+	border: 0px dotted;
 }
 
 .canvasFrame { 
 	grid-area: 2 / 2 / 10 / 10;
-	border: solid;
+
 }
 .colorPaletteFrame { 
 	grid-area: 2 / 11 / 10 / 14;
-	border: solid;
+
 }
 
 .blockInfo {

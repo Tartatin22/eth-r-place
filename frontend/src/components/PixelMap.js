@@ -53,7 +53,7 @@ export function PixelMap({ setPixel, getPixels }) {
     		if (picked_color == null){
     			alert("You need to specify a color before painting ! :P");
     		}else {
-    		setPixel(x, y, picked_color);
+    			setPixel(x, y, picked_color);
     		}
 	});
 
@@ -134,24 +134,25 @@ export function PixelMap({ setPixel, getPixels }) {
 }
   return (
     <div>
-
+	<button onClick={() => {
+          fetchPixels();
+          draw_cp();
+        }}>Fetch pixels</button>
       <div class="parent">
         <div class="canvasFrame">
-          <canvas id="canvas" width="512" height="512"></canvas>
+          <canvas id="canvas" width="608" height="608"></canvas>
         </div>
 
         <div class="colorPaletteFrame">
-          <canvas id="colorpalette" width="100" height="400"></canvas>
+          <canvas id="colorpalette" width="200" height="800"></canvas>
         </div>
+        
       </div>
       <div>
       <script type="text/javascript">
       	fetchPixels();
           draw_cp();</script>
-        <button onClick={() => {
-          fetchPixels();
-          draw_cp();
-        }}>Fetch pixels</button>
+        
 
       </div>
       
