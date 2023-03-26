@@ -53,7 +53,11 @@ export function PixelMap({ setPixel, getPixels }) {
     		if (picked_color == null){
     			alert("You need to specify a color before painting ! :P");
     		}else {
-    			setPixel(x, y, picked_color);
+    			setPixel(x, y, picked_color).then(() => {
+    				console.log("then ------");
+    				fetchPixels();
+    				draw_cp();
+    			});
     		}
 	});
 
