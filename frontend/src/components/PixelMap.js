@@ -47,10 +47,10 @@ export function PixelMap({ setPixel, getPixels }) {
   }
   return (
     <div>
-      <h4>PixelMap</h4>
+
       <div class="parent">
         <div class="canvasFrame">
-          <h1>canvas</h1>
+
           <canvas id="canvas" width="512" height="512"></canvas>
         </div>
 

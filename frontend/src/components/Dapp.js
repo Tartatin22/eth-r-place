@@ -95,20 +95,13 @@ export class Dapp extends React.Component {
       <div className="container p-4">
         <div className="row">
           <div className="col-12">
-            <h1>
-              {this.state.tokenData.name} ({this.state.tokenData.symbol})
-            </h1>
             <p>
-              Welcome <b>{this.state.selectedAddress}</b>, you have{" "}
-              <b>
-                {this.state.balance.toString()} {this.state.tokenData.symbol}
-              </b>
-              .
+              Adress <b>{this.state.selectedAddress}</b>
             </p>
           </div>
         </div>
 
-        <hr />
+
 
         <div className="row">
           <div className="col-12">
